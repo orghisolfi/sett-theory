@@ -22,172 +22,193 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #334155; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #1a1b22; /* Fondo oscuro suave */
+            color: #a1a5b6; /* Gris texto suave */
+        }
         .font-serif { font-family: 'Lora', serif; }
-        .math-box { background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        
+        /* LA SOLUCIÓN AL ERROR DE LAS FÓRMULAS ROTAS */
+        mjx-container[display="false"] svg {
+            display: inline !important;
+            vertical-align: -0.15em !important;
+        }
+        
+        /* Clases de colores personalizados para tarjetas y bordes */
+        .bg-soft-dark { background-color: #20222b; }
+        .bg-softer-dark { background-color: #272a34; }
+        .border-soft { border-color: #323644; }
+        .text-title { color: #e5e7eb; }
+        
+        /* Acentos pastel */
+        .text-pastel-blue { color: #82aaff; }
+        .text-pastel-purple { color: #c792ea; }
+        .text-pastel-green { color: #c3e88d; }
     </style>
 </head>
-<body class="leading-relaxed antialiased selection:bg-blue-100 selection:text-blue-900">
+<body class="leading-relaxed antialiased selection:bg-[#323644] selection:text-[#e5e7eb]">
 
-    <header class="bg-white/90 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
+    <header class="bg-[#1a1b22]/90 backdrop-blur-md border-b border-soft sticky top-0 z-50">
         <nav class="max-w-5xl mx-auto px-4 sm:px-6 flex justify-between items-center h-14">
-            <div class="flex items-center gap-2 text-slate-800">
-                <i class="fa-solid fa-circle-nodes text-slate-500"></i>
-                <span class="font-semibold text-lg tracking-tight">SECT <span class="text-slate-400 font-normal text-sm">v1.0</span></span>
+            <div class="flex items-center gap-2 text-title">
+                <i class="fa-solid fa-circle-nodes text-pastel-blue opacity-80"></i>
+                <span class="font-semibold text-lg tracking-tight">SECT <span class="text-[#6b7280] font-normal text-sm">v1.0</span></span>
             </div>
-            <div class="hidden md:flex gap-6 text-sm font-medium text-slate-500">
-                <a href="#ontology" class="hover:text-slate-900 transition">Ontología</a>
-                <a href="#stability" class="hover:text-slate-900 transition">Estabilidad</a>
-                <a href="#resonance" class="hover:text-slate-900 transition">Resonancia</a>
-                <a href="#math" class="hover:text-slate-900 transition">Formulación</a>
+            <div class="hidden md:flex gap-6 text-sm font-medium text-[#8b92a5]">
+                <a href="#ontology" class="hover:text-title transition">Ontología</a>
+                <a href="#stability" class="hover:text-title transition">Estabilidad</a>
+                <a href="#resonance" class="hover:text-title transition">Resonancia</a>
+                <a href="#math" class="hover:text-title transition">Formulación</a>
             </div>
-            <a href="manuscript/SECT_v1.0.md" download class="bg-slate-800 text-white px-4 py-1.5 rounded text-sm font-medium hover:bg-slate-700 transition">
+            <a href="manuscript/SECT_v1.0.md" download class="bg-[#2d313f] border border-soft text-title px-4 py-1.5 rounded text-sm font-medium hover:bg-[#383d4e] transition">
                 Descargar MD
             </a>
         </nav>
     </header>
 
-    <section class="bg-white border-b border-slate-200 py-12 md:py-16 px-4">
+    <section class="border-b border-soft py-12 md:py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-3 block">Física Teórica Fundamental</span>
-            <h1 class="text-3xl md:text-5xl font-semibold mb-5 tracking-tight text-slate-900 font-serif">
+            <span class="text-xs font-semibold tracking-widest text-pastel-purple opacity-80 uppercase mb-3 block">Física Teórica Fundamental</span>
+            <h1 class="text-3xl md:text-5xl font-semibold mb-5 tracking-tight text-title font-serif">
                 Spectral Electromagnetic <br class="hidden md:block">Confinement Theory
             </h1>
-            <p class="text-lg text-slate-500 font-light mb-8 max-w-2xl mx-auto">
+            <p class="text-lg font-light mb-8 max-w-2xl mx-auto text-[#8b92a5]">
                 Un marco clásico efectivo para el autoconfinamiento topológico de energía, sin mecanismos de Higgs ni dependencia del sector de color.
             </p>
-            <div class="flex justify-center gap-4 text-sm">
-                <a href="#math" class="text-blue-600 hover:text-blue-800 font-medium transition">Ver Ecuaciones &rarr;</a>
-                <a href="#stability" class="text-slate-500 hover:text-slate-800 font-medium transition">Análisis de Estabilidad &rarr;</a>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="#math" class="text-pastel-blue hover:text-white font-medium transition">Ver Ecuaciones &rarr;</a>
+                <a href="#stability" class="text-[#a1a5b6] hover:text-white font-medium transition">Análisis de Estabilidad &rarr;</a>
             </div>
         </div>
     </section>
 
-    <section id="ontology" class="py-12 md:py-16 px-4">
+    <section id="ontology" class="py-12 md:py-16 px-4 bg-soft-dark">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
             <div>
-                <h3 class="text-2xl font-semibold text-slate-900 mb-4 font-serif">El Solitón Toroidal</h3>
-                <p class="text-slate-600 mb-5 text-sm md:text-base">
+                <h3 class="text-2xl font-semibold text-title mb-4 font-serif">El Solitón Toroidal</h3>
+                <p class="mb-5 text-sm md:text-base text-[#a1a5b6]">
                     SECT postula que las partículas elementales emergen como <strong>solitones compactos</strong> de un campo electromagnético no lineal. La estructura toroidal garantiza un flujo continuo de energía protegiendo la identidad topológica del campo en el Gauge de Coulomb ($\nabla \cdot \mathbf{A} = 0$).
                 </p>
-                <ul class="space-y-3 text-sm text-slate-600 border-l-2 border-slate-200 pl-4">
-                    <li><strong class="text-slate-800">Autogiro:</strong> Helicidad intrínseca que emula el spin.</li>
-                    <li><strong class="text-slate-800">Finitud:</strong> Energía total matemáticamente regular, sin singularidades.</li>
-                    <li><strong class="text-slate-800">Inercia:</strong> La resistencia topológica emerge macroscópicamente como masa.</li>
+                <ul class="space-y-3 text-sm text-[#8b92a5] border-l-2 border-[#323644] pl-4">
+                    <li><strong class="text-[#cbd5e1]">Autogiro:</strong> Helicidad intrínseca que emula el spin.</li>
+                    <li><strong class="text-[#cbd5e1]">Finitud:</strong> Energía total matemáticamente regular, sin singularidades.</li>
+                    <li><strong class="text-[#cbd5e1]">Inercia:</strong> La resistencia topológica emerge macroscópicamente como masa.</li>
                 </ul>
             </div>
             <div class="grid grid-cols-2 gap-3">
-                <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                    <img src="assets/soliton.png" alt="Render conceptual" class="rounded w-full h-32 object-cover opacity-90">
-                    <p class="text-[10px] text-center text-slate-400 mt-2 uppercase tracking-wide">Conceptual</p>
+                <div class="bg-softer-dark p-2 rounded-lg border border-soft shadow-sm">
+                    <img src="assets/soliton.png" alt="Render conceptual" class="rounded w-full h-32 object-cover opacity-80 hover:opacity-100 transition">
+                    <p class="text-[10px] text-center text-[#6b7280] mt-2 uppercase tracking-wide">Conceptual</p>
                 </div>
-                <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                    <img src="assets/soliton_physics.png" alt="Simulación" class="rounded w-full h-32 object-cover opacity-90">
-                    <p class="text-[10px] text-center text-slate-400 mt-2 uppercase tracking-wide">Numérico</p>
+                <div class="bg-softer-dark p-2 rounded-lg border border-soft shadow-sm">
+                    <img src="assets/soliton_physics.png" alt="Simulación" class="rounded w-full h-32 object-cover opacity-80 hover:opacity-100 transition">
+                    <p class="text-[10px] text-center text-[#6b7280] mt-2 uppercase tracking-wide">Numérico</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="stability" class="py-12 md:py-16 bg-slate-50 border-y border-slate-200 px-4">
+    <section id="stability" class="py-12 md:py-16 border-y border-soft px-4">
         <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl font-semibold text-center text-slate-900 mb-10 font-serif">Estabilidad Estructural y Criterio de Lyapunov</h3>
+            <h3 class="text-2xl font-semibold text-center text-title mb-10 font-serif">Estabilidad Estructural y Criterio de Lyapunov</h3>
             
             <div class="grid md:grid-cols-2 gap-6 mb-10">
-                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
-                    <h4 class="font-semibold text-slate-800 mb-2">Paisaje de Energía</h4>
-                    <p class="text-xs text-slate-500 mb-4">Mínimo global que balancea la atracción no local (DoY) con la repulsión ultravioleta ($\lambda_4$).</p>
-                    <img src="assets/sect_landscape_3d.png" class="w-full h-48 object-cover rounded border border-slate-100">
+                <div class="bg-soft-dark p-5 rounded-lg border border-soft shadow-sm">
+                    <h4 class="font-semibold text-[#e5e7eb] mb-2 text-sm">Paisaje de Energía</h4>
+                    <p class="text-xs text-[#8b92a5] mb-4">Mínimo global que balancea la atracción no local (DoY) con la repulsión ultravioleta ($\lambda_4$).</p>
+                    <img src="assets/sect_landscape_3d.png" class="w-full h-48 object-cover rounded border border-[#323644] opacity-90">
                 </div>
-                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
-                    <h4 class="font-semibold text-slate-800 mb-2">Norma Fija</h4>
-                    <p class="text-xs text-slate-500 mb-4">Para cada carga inyectada $\mu$, el campo colapsa a un radio $L_* > 0$ estrictamente estable.</p>
-                    <img src="assets/sect_pure_stability.png" class="w-full h-48 object-cover rounded border border-slate-100">
+                <div class="bg-soft-dark p-5 rounded-lg border border-soft shadow-sm">
+                    <h4 class="font-semibold text-[#e5e7eb] mb-2 text-sm">Norma Fija</h4>
+                    <p class="text-xs text-[#8b92a5] mb-4">Para cada carga inyectada $\mu$, el campo colapsa a un radio $L_* > 0$ estrictamente estable.</p>
+                    <img src="assets/sect_pure_stability.png" class="w-full h-48 object-cover rounded border border-[#323644] opacity-90">
                 </div>
             </div>
 
-            <div class="math-box p-6 md:p-8 rounded-xl max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="bg-soft-dark border border-soft p-6 md:p-8 rounded-xl max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-6">
                 <div class="md:w-2/3">
-                    <h4 class="font-serif font-semibold text-slate-800 mb-3">Teorema de Robustez</h4>
-                    <p class="text-sm text-slate-600 mb-4">
+                    <h4 class="font-serif font-semibold text-pastel-blue mb-3">Teorema de Robustez</h4>
+                    <p class="text-sm text-[#a1a5b6] mb-4">
                         La estabilidad está garantizada debido a que el solitón constituye un mínimo local estricto del funcional de energía. Cualquier perturbación exige trabajo positivo.
                     </p>
-                    <div class="text-center bg-slate-50 py-3 rounded border border-slate-100">
-                        <span class="text-sm text-slate-700">$$ \delta^2 E[\mathbf{A}_*] > 0 $$</span>
+                    <div class="text-center bg-softer-dark py-3 rounded border border-soft">
+                        <span class="text-sm text-[#cbd5e1]">$$ \delta^2 E[\mathbf{A}_*] > 0 $$</span>
                     </div>
                 </div>
                 <div class="md:w-1/3">
-                    <img src="assets/lyapunov.png" class="w-full rounded border border-slate-100 opacity-90">
+                    <img src="assets/lyapunov.png" class="w-full rounded border border-[#323644] opacity-80">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cosmology" class="py-12 md:py-16 px-4">
+    <section id="cosmology" class="py-12 md:py-16 px-4 bg-soft-dark">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-semibold text-slate-900 mb-8 font-serif">Deriva Cosmológica del Solitón</h3>
+            <h3 class="text-2xl font-semibold text-title mb-8 font-serif">Deriva Cosmológica del Solitón</h3>
             <div class="grid md:grid-cols-3 gap-6 items-start">
                 <div class="md:col-span-2">
-                    <img src="assets/sect_proton_evolution.png" class="w-full rounded-lg border border-slate-200 shadow-sm">
-                    <p class="text-xs text-slate-400 mt-2 text-center">Evolución del radio confinado $L^*(t)$</p>
+                    <img src="assets/sect_proton_evolution.png" class="w-full rounded-lg border border-soft opacity-90">
+                    <p class="text-xs text-[#6b7280] mt-2 text-center">Evolución del radio confinado $L^*(t)$</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="border-l-2 border-slate-300 pl-4 py-1">
-                        <h5 class="text-sm font-semibold text-slate-800">Big Bang</h5>
-                        <p class="text-xs text-slate-500">Radio $\sim 0.3$ fm. Alta densidad, $m^2$ masivo.</p>
+                    <div class="border-l-2 border-[#eab308] pl-4 py-1">
+                        <h5 class="text-sm font-semibold text-[#e5e7eb]">Big Bang</h5>
+                        <p class="text-xs text-[#8b92a5]">Radio $\sim 0.3$ fm. Alta densidad, $m^2$ masivo.</p>
                     </div>
-                    <div class="border-l-2 border-blue-400 pl-4 py-1">
-                        <h5 class="text-sm font-semibold text-slate-800">Presente</h5>
-                        <p class="text-xs text-slate-500">Radio estabilizado $\sim 0.84$ fm (Meseta de estabilidad).</p>
+                    <div class="border-l-2 border-[#82aaff] pl-4 py-1">
+                        <h5 class="text-sm font-semibold text-[#e5e7eb]">Presente</h5>
+                        <p class="text-xs text-[#8b92a5]">Radio estabilizado $\sim 0.84$ fm (Meseta de estabilidad).</p>
                     </div>
-                    <div class="border-l-2 border-red-300 pl-4 py-1">
-                        <h5 class="text-sm font-semibold text-slate-800">Decaimiento</h5>
-                        <p class="text-xs text-slate-500">$>10^{30}$ años. Falla del confinamiento por expansión a $1.5$ fm.</p>
+                    <div class="border-l-2 border-[#ff8b94] pl-4 py-1">
+                        <h5 class="text-sm font-semibold text-[#e5e7eb]">Decaimiento</h5>
+                        <p class="text-xs text-[#8b92a5]">Al superar $\approx 10^{30}$ años, la expansión a $1.5$ fm fractura el confinamiento.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="math" class="py-12 md:py-16 bg-slate-50 border-t border-slate-200 px-4">
+    <section id="math" class="py-12 md:py-16 border-t border-soft px-4">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-semibold text-center text-slate-900 mb-10 font-serif">Fundamento Variacional</h3>
+            <h3 class="text-2xl font-semibold text-center text-title mb-10 font-serif">Fundamento Variacional</h3>
             
-            <div class="math-box p-6 md:p-10 rounded-xl mb-10 overflow-x-auto text-sm">
-                <p class="text-slate-500 mb-4 font-serif italic">El funcional de energía SECT en Gauge de Coulomb:</p>
-                <div class="text-slate-800">
+            <div class="bg-soft-dark border border-soft p-6 md:p-10 rounded-xl mb-10 overflow-x-auto text-sm shadow-sm">
+                <p class="text-[#6b7280] mb-4 font-serif italic">El funcional de energía SECT en Gauge de Coulomb:</p>
+                <div class="text-[#cbd5e1]">
                     $$ E[\mathbf{A}] = \int \!\! |\nabla \times \mathbf{A}|^2 d^3x + m^2 \int \!\! |\mathbf{A}|^2 d^3x $$
                     $$ \quad + \beta \iint \!\! j(\mathbf{x}) K(\mathbf{x}-\mathbf{y}) j(\mathbf{y}) d^3x d^3y + \frac{\lambda_4}{M^4} \int \!\! |\nabla \times \mathbf{A}|^4 d^3x $$
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-5 rounded border border-slate-200">
-                    <h5 class="font-semibold text-slate-800 mb-2 text-sm">1. Gap Infrarrojo ($m^2$)</h5>
-                    <p class="text-xs text-slate-600">Regula la escala de baja frecuencia y asegura la coercividad, previniendo la dispersión del campo a infinito.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-soft-dark p-5 rounded-lg border border-soft">
+                    <h5 class="font-semibold text-title mb-2 text-sm"><span class="text-pastel-blue mr-1">1.</span> Gap Infrarrojo ($m^2$)</h5>
+                    <p class="text-xs text-[#8b92a5]">Regula la escala de baja frecuencia y asegura la coercividad, previniendo la dispersión del campo a infinito.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200">
-                    <h5 class="font-semibold text-slate-800 mb-2 text-sm">2. Atracción No Local ($\beta$)</h5>
-                    <p class="text-xs text-slate-600">Kernel <em>Difference-of-Yukawas</em> (DoY). Provee la autogravedad necesaria para la compactación.</p>
+                <div class="bg-soft-dark p-5 rounded-lg border border-soft">
+                    <h5 class="font-semibold text-title mb-2 text-sm"><span class="text-pastel-purple mr-1">2.</span> Atracción No Local ($\beta$)</h5>
+                    <p class="text-xs text-[#8b92a5]">Kernel <em>Difference-of-Yukawas</em> (DoY). Provee la autogravedad necesaria para la compactación del nudo.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200">
-                    <h5 class="font-semibold text-slate-800 mb-2 text-sm">3. Estabilización UV ($\lambda_4$)</h5>
-                    <p class="text-xs text-slate-600">Blinda el sistema contra singularidades y satisface el teorema de Derrick modificado.</p>
+                <div class="bg-soft-dark p-5 rounded-lg border border-soft">
+                    <h5 class="font-semibold text-title mb-2 text-sm"><span class="text-pastel-green mr-1">3.</span> Estabilización UV ($\lambda_4$)</h5>
+                    <p class="text-xs text-[#8b92a5]">Blinda el sistema contra singularidades puntuales y satisface el teorema de Derrick modificado.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-slate-200 py-10 px-4">
+    <footer class="bg-[#15161c] border-t border-[#232530] py-10 px-4">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-center md:text-left">
-                <p class="text-sm font-semibold text-slate-800">Proyecto SECT</p>
-                <p class="text-xs text-slate-500 mt-1">Revisión Científica Abierta (Open Science)</p>
+                <p class="text-sm font-semibold text-[#cbd5e1]">Proyecto SECT</p>
+                <p class="text-xs text-[#6b7280] mt-1">Revisión Científica Abierta (Open Science)</p>
             </div>
-            <div class="text-xs text-slate-400">
-                <a href="mailto:sect.theory@proton.me" class="hover:text-slate-700 transition"><i class="fa-solid fa-envelope mr-1"></i>sect.theory@proton.me</a>
+            <div class="text-xs text-[#8b92a5]">
+                <a href="mailto:sect.theory@proton.me" class="hover:text-white transition"><i class="fa-solid fa-envelope mr-1"></i>sect.theory@proton.me</a>
             </div>
-            <div class="text-xs text-slate-400 text-center md:text-right">
+            <div class="text-xs text-[#6b7280] text-center md:text-right">
                 <p>&copy; 2026. Documento Técnico v1.0</p>
             </div>
         </div>
