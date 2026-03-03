@@ -1,16 +1,21 @@
-<h2>Capítulo 1 — Ontología del Campo Fundamental</h2>
-
-<h3>1.1 Motivación Ontológica</h3>
+<h1>Capítulo 1 — Ontología y Estructura del Campo Fundamental</h1>
 
 <p>
-SETT parte de una hipótesis estructural: el vacío se modela como un medio
-capaz de soportar configuraciones torsionales estacionarias.
-No se introducen campos escalares auxiliares ni sector de color.
+Este capítulo establece la formulación ontológica y funcional del modelo SETT.
+El punto de partida no es la partícula puntual, sino un campo vectorial real
+definido en el espacio tridimensional cuya dinámica admite configuraciones
+compactas de energía finita bajo hipótesis explícitas.
 </p>
 
+<h3>1.1 Objeto Fundamental</h3>
+
 <p>
-El objeto fundamental es un campo vectorial real $\mathbf A : \mathbb{R}^3 \to \mathbb{R}^3$
-con condición de transversalidad:
+El objeto primario es un campo vectorial real
+$$
+\mathbf A : \mathbb R^3 \rightarrow \mathbb R^3
+$$
+definido en todo el espacio. El modelo se restringe al subespacio transversal,
+imponiendo la condición:
 </p>
 
 <div class="panel">
@@ -20,24 +25,33 @@ $$
 </div>
 
 <p>
-Esta restricción elimina grados longitudinales y define el espacio funcional
-de trabajo como subespacio cerrado de $H^1(\mathbb R^3)^3$.
+Esta condición no se introduce como una elección de gauge auxiliar,
+sino como restricción estructural del espacio funcional de trabajo.
+Con ello se eliminan grados longitudinales y el contenido dinámico
+queda completamente determinado por el rotacional
+$$
+\mathbf B = \nabla \times \mathbf A.
+$$
 </p>
 
 <h3>1.2 Espacio Funcional</h3>
 
 <p>
-Se define:
+Se define el espacio de Hilbert:
 </p>
 
 <div class="panel">
 $$
-\mathcal H = \{ \mathbf A \in H^1(\mathbb R^3)^3 \mid \nabla\cdot\mathbf A = 0 \}
+\mathcal H =
+\left\{
+\mathbf A \in H^1(\mathbb R^3)^3 \;\middle|\;
+\nabla \cdot \mathbf A = 0
+\right\}.
 $$
 </div>
 
 <p>
-La norma natural es:
+La norma natural inducida por la parte cuadrática del funcional es:
 </p>
 
 <div class="panel">
@@ -45,23 +59,27 @@ $$
 \|\mathbf A\|_{\mathcal H}^2
 =
 \int |\nabla \times \mathbf A|^2 d^3x
-+ m^2 \int |\mathbf A|^2 d^3x
++
+m^2 \int |\mathbf A|^2 d^3x.
 $$
 </div>
 
 <p>
-Esta estructura garantiza coercividad infrarroja.
+El parámetro $m^2 > 0$ introduce un control infrarrojo
+que impide dispersión arbitraria de configuraciones de baja frecuencia.
+En este marco, $m$ no se interpreta como masa insertada ad hoc,
+sino como parámetro estructural del vacío efectivo.
 </p>
 
-<h3>1.3 Conservación de Norma</h3>
+<h3>1.3 Restricción de Norma</h3>
 
 <p>
-Se introduce la cantidad conservada:
+Se introduce la cantidad global:
 </p>
 
 <div class="panel">
 $$
-\mu = \int |\mathbf A|^2 d^3x
+\mu = \int |\mathbf A|^2 d^3x.
 $$
 </div>
 
@@ -71,39 +89,60 @@ El problema variacional fundamental es:
 
 <div class="panel">
 $$
-\min \{ E[\mathbf A] \;|\; \mathbf A \in \mathcal H,\ \|\mathbf A\|_{L^2}^2 = \mu \}
+\min
+\left\{
+E[\mathbf A]
+\;\middle|\;
+\mathbf A \in \mathcal H,
+\;\|\mathbf A\|_{L^2}^2 = \mu
+\right\}.
 $$
 </div>
 
 <p>
-La restricción impide dispersión trivial hacia cero y permite
-buscar minimizadores compactos.
+La restricción excluye el estado trivial $\mathbf A = 0$
+y permite la búsqueda de minimizadores no nulos.
+La competencia entre términos no lineales y no locales
+determina si tales minimizadores poseen soporte compacto efectivo.
 </p>
 
-<h3>1.4 Interpretación Física</h3>
+<h3>1.4 Estabilidad Local</h3>
 
 <p>
-Una configuración minimizadora representa una estructura torsional
-autoconfinada cuya masa efectiva se identifica con:
-</p>
-
-<div class="panel">
-$$
-M_{\text{eff}} = E[\mathbf A_*]
-$$
-</div>
-
-<p>
-La estabilidad se determina por la positividad del Hessiano restringido:
+Sea $\mathbf A_*$ un minimizador bajo la restricción anterior.
+La estabilidad lineal requiere la positividad del Hessiano restringido:
 </p>
 
 <div class="panel">
 $$
 \delta^2 E[\mathbf A_*] > 0
+\quad \text{en el subespacio tangente a la restricción.}
 $$
 </div>
 
 <p>
-El resto del manuscrito examina las condiciones bajo las cuales
-esa positividad es estricta y estructuralmente robusta.
+La demostración completa de coercividad,
+exclusión de dicotomía y control ultravioleta
+se desarrolla en capítulos posteriores.
+Aquí se establece únicamente la estructura funcional necesaria.
 </p>
+
+<h3>1.5 Alcance Ontológico</h3>
+
+<p>
+En este marco, una "partícula" se interpreta como
+una configuración estacionaria del campo fundamental.
+No se introducen grados de libertad escalares adicionales
+ni sector de color.
+La compatibilidad cuantitativa con escalas hadrónicas
+se analiza posteriormente como consistencia fenomenológica,
+no como derivación directa desde primeros principios.
+</p>
+
+<div class="critical-note">
+<strong>Resumen técnico del capítulo:</strong><br>
+(1) Campo vectorial transversal en $H^1$. <br>
+(2) Control infrarrojo mediante parámetro $m^2$. <br>
+(3) Problema variacional bajo restricción de norma global. <br>
+(4) Estabilidad local formulada como positividad del Hessiano restringido.
+</div>
