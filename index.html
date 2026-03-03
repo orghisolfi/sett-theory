@@ -19,12 +19,12 @@ MathJax = {
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
 
 :root{
-    --bg:#16181c;
-    --panel:#1e2127;
-    --border:#2c3138;
-    --text:#e6e6e6;
-    --muted:#a0a4ad;
-    --accent:#9ab4ff;
+    --bg:#14161a;
+    --panel:#1c1f25;
+    --border:#2a2f36;
+    --text:#e8e8e8;
+    --muted:#a4a9b3;
+    --accent:#9fb4ff;
 }
 
 body{
@@ -32,124 +32,97 @@ body{
     background:var(--bg);
     color:var(--muted);
     font-family:'Inter',sans-serif;
-    line-height:1.6;
+    line-height:1.65;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
-    padding:40px 28px;
+    padding:45px 30px;
 }
 
 h1,h2,h3{
     font-family:'Playfair Display',serif;
     color:var(--text);
     font-weight:600;
-    letter-spacing:.3px;
 }
 
-h1{ font-size:42px; margin-bottom:10px; }
-h2{ font-size:26px; margin-top:60px; margin-bottom:16px; }
-h3{ font-size:20px; margin-top:35px; }
+h1{ font-size:46px; margin-bottom:8px; }
+h2{ font-size:28px; margin-top:70px; }
+h3{ font-size:20px; margin-top:40px; }
 
-p{ margin-bottom:18px; }
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
 .panel{
     background:var(--panel);
-    padding:24px;
     border:1px solid var(--border);
-    margin-top:24px;
+    padding:28px;
+    margin-top:25px;
 }
 
-a{
-    color:var(--accent);
-    text-decoration:none;
+img{
+    max-width:100%;
+    border:1px solid var(--border);
 }
 
-a:hover{
-    text-decoration:underline;
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
 }
 
-hr{
-    border:none;
-    border-top:1px solid var(--border);
-    margin:50px 0;
+th,td{
+    border:1px solid var(--border);
+    padding:10px;
+    text-align:left;
 }
 
-.header{
-    border-bottom:1px solid var(--border);
-    padding-bottom:25px;
-}
-
-.subtitle{
-    font-size:18px;
-    color:var(--muted);
+th{
+    background:var(--panel);
+    color:var(--text);
 }
 
 .small{
     font-size:14px;
     color:var(--muted);
 }
+
+hr{
+    border:none;
+    border-top:1px solid var(--border);
+    margin:60px 0;
+}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<div class="header">
 <h1>SETT</h1>
-<div class="subtitle">Spectral Electromagnetic Torsion Theory</div>
-<p class="small">
-Programa de investigación independiente en física teórica.<br>
-Evolución conceptual: MTC → GECO → YECT → SETT.
-</p>
-</div>
+<div class="small">Spectral Electromagnetic Torsion Theory</div>
 
-<h2>Resumen</h2>
 <p>
-SETT explora la posibilidad de que configuraciones torsionadas de un campo vectorial real generen estructuras compactas de energía finita mediante un mecanismo puramente variacional no lineal.
-</p>
-<p>
-El modelo investiga si el autoconfinamiento puede emerger sin recurrir a ruptura escalar tipo Higgs ni a sector de color, dentro de un marco efectivo clásico con estructura espectral controlada.
+Programa de investigación independiente en física teórica orientado al estudio del autoconfinamiento variacional de energía en un campo vectorial torsionado.
 </p>
 
 <hr>
 
-<h2>Origen del Programa</h2>
+<h2>Resumen Extendido</h2>
+
 <p>
-El programa nació de una pregunta ontológica básica: ¿puede la energía organizarse en estructuras estables únicamente a partir de la torsión interna de un campo electromagnético?
+SETT investiga si configuraciones estacionarias de un campo vectorial real pueden generar estructuras compactas de energía finita mediante un mecanismo puramente no lineal.
 </p>
+
 <p>
-Las primeras formulaciones (MTC) introdujeron la idea de torsión confinada.  
-YECT formalizó el problema en términos variacionales.  
-SECT estabilizó la estructura no local.  
-GECO exploró la consistencia geométrica.  
-SETT consolida el marco ontológico y espectral bajo hipótesis estructurales explícitas.
+El programa evolucionó a través de:
+MTC → YECT → SECT → GECO → SETT,
+con refinamiento progresivo del análisis funcional, coercividad y estructura espectral.
 </p>
 
 <hr>
 
-<h2>Ontología Fundamental</h2>
-<p>
-SETT postula la existencia de un campo vectorial real definido en el subespacio transversal ($\nabla \cdot \mathbf{A}=0$).
-</p>
-<p>
-La masa no es introducida como parámetro externo, sino que emerge como energía propia de un minimizador compacto bajo restricción de norma.
-</p>
-<p>
-El modelo:
-</p>
-<ul>
-<li>No depende de Higgs.</li>
-<li>No depende de QCD.</li>
-<li>No es gauge lineal disfrazado.</li>
-<li>Se presenta como teoría efectiva clásica.</li>
-</ul>
-
-<hr>
-
-<h2>Estructura Variacional</h2>
+<h2>Estructura Variacional Central</h2>
 
 <div class="panel">
 $$
@@ -162,105 +135,90 @@ $$
 </div>
 
 <p>
-La estructura cumple tres funciones:
-</p>
-
-<ul>
-<li>Control infrarrojo mediante $m^2$.</li>
-<li>Compactación no local vía kernel DoY.</li>
-<li>Blindaje ultravioleta mediante término cuártico.</li>
-</ul>
-
-<hr>
-
-<h2>Resultados Matemáticos</h2>
-
-<p> Bajo hipótesis estructurales mínimas:</p>
-
-<ul>
-<li>Coercividad global bajo restricción.</li>
-<li>Existencia de minimizador compacto.</li>
-<li>Exclusión de dicotomía (concentración–compactación).</li>
-<li>Gap espectral del Hessiano linealizado.</li>
-<li>Estabilidad tipo Lyapunov.</li>
-</ul>
-
-<p>
-Los desarrollos completos se encuentran en el manuscrito SETT_v1.0.
+La competencia entre términos infrarrojos, no locales y ultravioleta produce un mínimo compacto bajo restricción de norma.
 </p>
 
 <hr>
 
-<h2>Estructura Espectral y Resonancia</h2>
+<h2>Paisaje de Energía Numérico</h2>
 
-<p>
-Bajo restricción de norma $\mu = \int |\mathbf A|^2 d^3x$:
-</p>
-
-<ul>
-<li>Existe tamaño óptimo $L_*(\mu)$.</li>
-<li>La frecuencia interna satisface $\omega = \partial E/\partial \mu$.</li>
-<li>Se obtiene familia discreta de estados estacionarios.</li>
-</ul>
-
-<p>
-Esta estructura sugiere interpretación en términos de nodos resonantes internos del campo torsionado.
-</p>
-
-<hr>
-
-<h2>Resultados Numéricos</h2>
-
-<p>
-Simulaciones bajo simetría axial muestran paisaje energético con mínimo local estricto y radio emergente sin ajuste ad hoc.
-</p>
+<img src="assets/sect_landscape_3d.png" alt="Paisaje Energía">
 
 <p class="small">
-Las figuras representan aproximaciones numéricas del problema restringido.
+Figura 1. Superficie energética $E(A,L)$ mostrando mínimo local estricto bajo simetría axial.
 </p>
+
+<hr>
+
+<h2>Configuración Estimada del Solitón</h2>
+
+<img src="assets/soliton.png" alt="Solitón Toroidal">
+
+<p class="small">
+Figura 2. Aproximación numérica de configuración toroidal de flujo torsionado.
+</p>
+
+<hr>
+
+<h2>Resultados Numéricos Representativos</h2>
+
+<table>
+<tr>
+<th>Parámetro</th>
+<th>Valor típico</th>
+<th>Rol estructural</th>
+</tr>
+<tr>
+<td>$m^2$</td>
+<td>0.8 – 1.2</td>
+<td>Escala infrarroja</td>
+</tr>
+<tr>
+<td>$\beta$</td>
+<td>0.4 – 0.7</td>
+<td>Compactación no local</td>
+</tr>
+<tr>
+<td>$\lambda_4$</td>
+<td>0.1 – 0.3</td>
+<td>Estabilización UV</td>
+</tr>
+<tr>
+<td>$L_*$</td>
+<td>1.4 – 1.6</td>
+<td>Radio óptimo emergente</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Índice del Manuscrito en Desarrollo</h2>
+
+<ul>
+<li><a href="cap1.html">Capítulo 1 — Ontología y Fundamentos</a></li>
+<li><a href="cap2.html">Capítulo 2 — Análisis Variacional y Coercividad</a></li>
+<li><a href="cap3.html">Capítulo 3 — Exclusión de Dicotomía</a></li>
+<li><a href="cap4.html">Capítulo 4 — Estructura Espectral y Gap</a></li>
+<li><a href="cap5.html">Capítulo 5 — Extensión Dinámica</a></li>
+</ul>
 
 <hr>
 
 <h2>Consecuencias Exploratorias</h2>
 
 <ul>
-<li>Escalas naturales emergentes sin ruptura escalar explícita.</li>
+<li>Emergencia de escala estable sin ruptura escalar explícita.</li>
+<li>Relación carga–frecuencia $\omega = \partial E/\partial \mu$.</li>
 <li>Robustez estructural bajo perturbaciones moderadas.</li>
-<li>Posible conexión entre estructura espectral y cuantización efectiva.</li>
-</ul>
-
-<p>
-Estas consecuencias se presentan como hipótesis investigables.
-</p>
-
-<hr>
-
-<h2>Interpretación desde Ingeniería</h2>
-
-<p>
-Desde el punto de vista de sistemas dinámicos:
-</p>
-
-<ul>
-<li>El funcional actúa como función de Lyapunov global.</li>
-<li>El solitón es un punto de operación estable.</li>
-<li>La no linealidad introduce mecanismo de saturación UV.</li>
-<li>El sistema exhibe realimentación estructural autoestabilizante.</li>
 </ul>
 
 <hr>
 
-<h2>Estado del Proyecto</h2>
+<h2>Contacto</h2>
 
 <p>
-Manuscrito completo: <a href="SETT_v1.0.pdf">SETT_v1.0</a><br>
-Código numérico y simulaciones disponibles en el repositorio.
-</p>
-
-<p>
-Contacto:<br>
 Oscar Ghisolfi<br>
-<a href="mailto:tugmail@gmail.com">tugmail@gmail.com</a>
+<a href="mailto:orghsolfi@gmail.com">orghisolfi@gmail.com</a>
 </p>
 
 </div>
