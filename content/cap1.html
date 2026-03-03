@@ -1,11 +1,109 @@
-<h2>Capítulo 1 — Ontología</h2>
+<h2>Capítulo 1 — Ontología del Campo Fundamental</h2>
+
+<h3>1.1 Motivación Ontológica</h3>
 
 <p>
-Formulación ontológica del campo torsional transversal.
+SETT parte de una hipótesis estructural: el vacío se modela como un medio
+capaz de soportar configuraciones torsionales estacionarias.
+No se introducen campos escalares auxiliares ni sector de color.
 </p>
 
-<h3>1.1 Campo Fundamental</h3>
+<p>
+El objeto fundamental es un campo vectorial real $\mathbf A : \mathbb{R}^3 \to \mathbb{R}^3$
+con condición de transversalidad:
+</p>
+
+<div class="panel">
+$$
+\nabla \cdot \mathbf A = 0
+$$
+</div>
 
 <p>
-Se define un campo vectorial real en el subespacio $\nabla\cdot\mathbf A = 0$.
+Esta restricción elimina grados longitudinales y define el espacio funcional
+de trabajo como subespacio cerrado de $H^1(\mathbb R^3)^3$.
+</p>
+
+<h3>1.2 Espacio Funcional</h3>
+
+<p>
+Se define:
+</p>
+
+<div class="panel">
+$$
+\mathcal H = \{ \mathbf A \in H^1(\mathbb R^3)^3 \mid \nabla\cdot\mathbf A = 0 \}
+$$
+</div>
+
+<p>
+La norma natural es:
+</p>
+
+<div class="panel">
+$$
+\|\mathbf A\|_{\mathcal H}^2
+=
+\int |\nabla \times \mathbf A|^2 d^3x
++ m^2 \int |\mathbf A|^2 d^3x
+$$
+</div>
+
+<p>
+Esta estructura garantiza coercividad infrarroja.
+</p>
+
+<h3>1.3 Conservación de Norma</h3>
+
+<p>
+Se introduce la cantidad conservada:
+</p>
+
+<div class="panel">
+$$
+\mu = \int |\mathbf A|^2 d^3x
+$$
+</div>
+
+<p>
+El problema variacional fundamental es:
+</p>
+
+<div class="panel">
+$$
+\min \{ E[\mathbf A] \;|\; \mathbf A \in \mathcal H,\ \|\mathbf A\|_{L^2}^2 = \mu \}
+$$
+</div>
+
+<p>
+La restricción impide dispersión trivial hacia cero y permite
+buscar minimizadores compactos.
+</p>
+
+<h3>1.4 Interpretación Física</h3>
+
+<p>
+Una configuración minimizadora representa una estructura torsional
+autoconfinada cuya masa efectiva se identifica con:
+</p>
+
+<div class="panel">
+$$
+M_{\text{eff}} = E[\mathbf A_*]
+$$
+</div>
+
+<p>
+La estabilidad se determina por la positividad del Hessiano restringido:
+</p>
+
+<div class="panel">
+$$
+\delta^2 E[\mathbf A_*] > 0
+$$
+</div>
+
+<p>
+El resto del manuscrito examina las condiciones bajo las cuales
+esa positividad es estricta y estructuralmente robusta.
 </p>
